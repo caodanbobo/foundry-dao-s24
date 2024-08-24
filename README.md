@@ -1,66 +1,23 @@
-## Foundry
+# DAO - Decentralized Autonomous Organzition
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## What is taught in this lesson
 
-Foundry consists of:
+> 1. We are going to have a contract controlled by a DAO
+> 2. Every transaction that the DAO wants to send has to be voted on
+> 3. We will use ERC20 tokens for voting(bad model, Please reaserch better models as you get better)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Creating a token voting DAO using openzeppelin,
 
-## Documentation
+- what are the key componenets(token, Governer, TimeLock, etc).
+- The lifecycle of a proposal
 
-https://book.getfoundry.sh/
+## What i have learnt
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+1. What is a DAO: A DAO is a decision-making mechanism facilitated by blockchain technology.
+   - Members (maybe any of them?) of a DAO can create proposals and allow all/some members of the DAO to vote on them. Once a proposal is passed, it gets executed.
+   - Programmatically, a DAO is a set of smart contracts that make this whole process happen.
+   - The key challenge is how to balance efficiency and democracy in the voting process. That why Patrick said that the token voting is bad because it would led to plutocracy.
+2. How to design a DAO? Fairness vs Effiency
+   1. PoS vs DPoS: Delegating would increase the efficiency of decision-making, but how to prevent the centralization?
+   2. Sovereign vs corperate (in vitalik's article "DAOs are not corporations", i believe that sovereign is more decentralized, while the other is more centralized).
+   3. convex vs concave
