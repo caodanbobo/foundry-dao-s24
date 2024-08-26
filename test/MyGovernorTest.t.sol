@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
+
 import {Test, console} from "forge-std/Test.sol";
 import {MyGovernor} from "src/MyGovernor.sol";
 import {Box} from "src/Box.sol";
@@ -53,10 +54,7 @@ contract MyGovernorTest is Test {
     function testGovernanceUpdateBox() public {
         uint256 valueToStore = 888;
         string memory decp = "store 888 in box";
-        bytes memory encodedFuncCall = abi.encodeWithSignature(
-            "store(uint256)",
-            valueToStore
-        );
+        bytes memory encodedFuncCall = abi.encodeWithSignature("store(uint256)", valueToStore);
         values.push(0);
         calldatas.push(encodedFuncCall);
         targets.push(address(box));
